@@ -6,11 +6,13 @@ Simple jQuery based localization tool for Single Page Apps.
 ##Installation  
 ```  
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="/translations.js"></script>
 <script src="/l10n.js"></script>
 ```  
+If you use jQuery 1.*, this should be compatible down to IE 6.  
 
 ##Translations  
-Use a javascript object to store the translations:  
+Use a javascript object l10n to store the translations:  
 ```  
 var l10n = {}  
 
@@ -20,7 +22,7 @@ l10n.hello = {
   lat: "Sveiki pasaule"
 }
 ```  
-This way of storing the translations makes the translastion process easier.
+This way of storing the translations makes the translastion process easier.  
 Especially if you need to change one expression in 3 languages.
 
 ##HTML  
