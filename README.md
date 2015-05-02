@@ -44,12 +44,11 @@ translate(language);
 **l(word,language)**
 Use this when adding content dynamically.  
 ```  
-// This here clears the div "hello" and
-// adds the translation of "hello" to it in english.
 var language = "eng";
 $("#hello").empty().append(l("hello",language)); // get the desired language translation of "hello".
 ```  
-
+This clears the div "hello" and adds the translation of "hello" to it in english.  
+  
 ##Licence
 
 The MIT License (MIT)  
