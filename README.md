@@ -45,7 +45,7 @@ translate(language);
 Use this when adding content dynamically.  
 ```  
 var language = "eng";
-$("#hello").empty().append(l("hello",language)); // get the desired language translation of "hello".
+$("#hello").empty().append(l("hello",language)); 
 ```  
 This clears the div with id "hello" and adds the translation of "hello" to it in english.  
 
