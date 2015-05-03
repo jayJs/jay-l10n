@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Jay-l10n</title>
+  </head>
+  <body>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="/translations.js"></script>
+    <script src="/l10n.js"></script>
+    <script>
+      var language = "eng";
+      $(document).ready(function(){
+
+        ITERATIONS = 500;
+
+        console.time('Create translations');
+          for ( iteration = 0; iteration < ITERATIONS; iteration++ ) {
+            var translationId = 'translation' + iteration;
+            l10n[translationId] = { eng: 'Lorem englishium #' + iteration }
+            $('<p>', {
+              'data-translate': translationId
+            }).appendTo('body');
+          }
+        console.timeEnd('Create translations');
+
+        console.time('Translate');
+          translate("eng");
+        console.timeEnd('Translate');
+
+      });
+    </script>
+  </body>
+</html>
