@@ -6,7 +6,6 @@ Simple jQuery based localization tool for Single Page Apps.
 ##Installation  
 ```  
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="/translations.js"></script>
 <script src="/l10n.js"></script>
 <script>
   var language = "eng";
