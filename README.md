@@ -43,9 +43,9 @@ Run this on page load and again if the user switches language while being on sit
 translate("eng");  
 ```  
 
-**l(word)**
-Returns the translation according to current "language" variable.
-Use this when adding content dynamically.  
+**l(word)**  
+Returns the translation according to current "language" variable.  
+Use this when adding content dynamically.   
 ```  
 var language = "eng";
 $("#hello").empty().append( l("hello") );
