@@ -30,7 +30,7 @@ Especially if you need to change one expression in 3 languages.
 
 ##HTML  
 ```  
-<div data-translate="haveACoffee"></div>
+<div data-translate="hello"></div>
 ```  
 If function translate(language) is run, the content of this element will be translated into disaired language.  
 
@@ -47,7 +47,7 @@ translate("eng");
 Use this when adding content dynamically.  
 ```  
 var language = "eng";
-$("#hello").empty().append(l("hello",language));
+$("#hello").empty().append(l("hello"));
 ```  
 This clears the div with id "hello" and adds the translation of "hello" to it in english.  
 
