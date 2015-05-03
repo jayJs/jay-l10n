@@ -17,7 +17,7 @@
         console.time('Create translations');
           for ( iteration = 0; iteration < ITERATIONS; iteration++ ) {
             var translationId = 'translation' + iteration;
-            l10n[translationId] = { eng: 'Lorem englishium #' + iteration }
+            l10n[translationId] = { eng: 'Lorem ipsum #' + iteration }
             $('<p>', {
               'data-translate': translationId
             }).appendTo('body');
@@ -27,6 +27,15 @@
         console.time('Translate');
           translate("eng");
         console.timeEnd('Translate');
+
+        console.time('Localization.js: Update translations');
+          for ( iteration = 0; iteration < ITERATIONS; iteration++ ) {
+            var translationId = 'translation' + iteration;
+            l10n[translationId] = { eng: 'Lorem ipsum updated #' + iteration }
+          }
+          translate("eng");
+        console.timeEnd('Localization.js: Update translations');
+
 
       });
     </script>
