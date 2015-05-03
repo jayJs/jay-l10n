@@ -8,11 +8,14 @@ Simple jQuery based localization tool for Single Page Apps.
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="/translations.js"></script>
 <script src="/l10n.js"></script>
+<script>
+  var language = "eng";
+</script>
 ```  
-If you use jQuery 1.*, this should be compatible down to IE 6.  
+Variable "language" has to be available for l().  
 
 ##Translations  
-Use a javascript object l10n to store the translations:  
+Use a javascript object "l10n" to store the translations:  
 ```  
 var l10n = {}  
 
@@ -22,12 +25,12 @@ l10n.hello = {
   lat: "Sveiki pasaule"
 }
 ```  
-This way of storing the translations makes the translastion process easier.  
+This way of storing the translations makes the translation process easier.  
 Especially if you need to change one expression in 3 languages.
 
 ##HTML  
 ```  
-<div class="l10n" data-word="haveACoffee"></div>
+<div data-translate="haveACoffee"></div>
 ```  
 If function translate(language) is run, the content of this element will be translated into disaired language.  
 
@@ -37,15 +40,14 @@ If function translate(language) is run, the content of this element will be tran
 Translates all elements with class "l10n" on the site.  
 Run this on page load and again if the user switches language while being on site.  
 ```  
-var language = "eng";
-translate(language);  
+translate("eng");  
 ```  
 
-**l(word,language)**
+**l(word)**
 Use this when adding content dynamically.  
 ```  
 var language = "eng";
-$("#hello").empty().append(l("hello",language)); 
+$("#hello").empty().append(l("hello",language));
 ```  
 This clears the div with id "hello" and adds the translation of "hello" to it in english.  
 
