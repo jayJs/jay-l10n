@@ -50,6 +50,7 @@ var language = "eng";
 $("#hello").empty().append(l("hello"));
 ```  
 This clears the div with id "hello" and adds the translation of "hello" to it in english.  
+Make sure language is declared before calling this.   
 
 ##Licence
 
