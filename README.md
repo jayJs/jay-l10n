@@ -12,7 +12,6 @@ Simple jQuery based localization tool for Single Page Apps.
   var language = "eng";
 </script>
 ```  
-Variable "language" has to be available for l().  
 
 ##Translations  
 Use a javascript object "l10n" to store the translations:  
@@ -25,8 +24,6 @@ l10n.hello = {
   lat: "Sveiki pasaule"
 }
 ```  
-This way of storing the translations makes the translation process easier.  
-Especially if you need to change one expression in 3 languages.
 
 ##HTML  
 ```  
@@ -37,15 +34,15 @@ If function translate(language) is run, the content of this element will be tran
 ##API  
 
 **translate(language)**  
-Translates all elements with class "l10n" on the site.  
+Translates all elements with "data-translate" set on the site.  
 Run this on page load and again if the user switches language while being on site.  
 ```  
 translate("eng");  
 ```  
 
-**l(word)**  
+**l("keyword")**  
 Returns the translation according to current "language" variable.  
-Use this when adding content dynamically.   
+Use this when adding content dynamically.
 ```  
 var language = "eng";
 $("#hello").empty().append( l("hello") );
