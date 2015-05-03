@@ -6,8 +6,8 @@
   </head>
   <body>
 
-    <div id="hello"></div><br /><!-- Hello world -->
-    <div class="l10n" data-word="haveACoffee"></div> <!-- Have a coffee -->
+    <div id="helloWorld"></div><br />
+    <div data-translate="haveACoffee"></div>
 
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="/translations.js"></script>
@@ -17,14 +17,14 @@
         // Set the desired language.
         var language = "eng"; // switch that to "est" and "lat" for testing the translations.js file contents.
 
-        // Translate all elements with class "l10n" on the site.
-        // In this case it's only one, with the "data-word" set to "haveACoffee".
+        // Translate all elements with data-translate attribute on the site.
+        // In this case here it's only one, with the "data-translate" set to "haveACoffee".
         // Run this function again, if the user switches language while being on site.
         translate(language);
 
         // Use l() when adding content dynamically.
         // This here clears the div "hello" and adds the translation of "hello" to it in english
-        $("#hello").empty().append(l("hello",language)); // get the desired language translation of "hello".
+        $("#helloWorld").empty().append(l("helloWorld",language)); // get the desired language translation of "hello".
       });
     </script>
   </body>

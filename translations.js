@@ -1,7 +1,7 @@
 
 var l10n = {}
 
-l10n.hello = {
+l10n.helloWorld = {
   est: "Tere maailm",
   eng: "Hello world",
   lat: "Sveiki pasaule"
