@@ -28,13 +28,13 @@
           translate("eng");
         console.timeEnd('Translate');
 
-        console.time('Localization.js: Update translations');
+        console.time('Update translations');
           for ( iteration = 0; iteration < ITERATIONS; iteration++ ) {
             var translationId = 'translation' + iteration;
             l10n[translationId] = { eng: 'Lorem ipsum updated #' + iteration }
           }
           translate("eng");
-        console.timeEnd('Localization.js: Update translations');
+        console.timeEnd('Update translations');
 
 
       });
