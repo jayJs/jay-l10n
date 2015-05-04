@@ -10,20 +10,22 @@
     <div data-translate="haveACoffee"></div>
 
     <script src="/translations.js"></script>
-    <script src="/l10n.js"></script>
+    <script src="/dist/jay-l10n.js"></script>
     <script>
       var language = "eng"; // switch that to "est" and "lat" for testing the translations.js file contents.
-      $(document).ready(function(){
 
-        // Translate all elements with data-translate attribute on the site.
-        // In this case here it's only one, with the "data-translate" set to "haveACoffee".
-        // Run this function again, if the user switches language while being on site.
-        translate(language);
+      // Translate all elements with data-translate attribute on the site.
+      // In this case here it's only one, with the "data-translate" set to "haveACoffee".
+      // Run this function again, if the user switches language while being on site.
+      translate(language);
 
-        // Use l() when adding content dynamically.
-        // This here clears the div "hello" and adds the translation of "hello" to it in english
-        $("#helloWorld").empty().append(l("helloWorld",language)); // get the desired language translation of "hello".
-      });
+      // Use l() when adding content dynamically.
+      // This here clears the div "hello" and adds the translation of "hello" to it in english
+      var element = document.getElementById("helloWorld");
+      element.innerHTML = l("helloWorld",language);
+
+      // this is how you would do it in jQuery:
+      //$("#helloWorld").empty().append(l("helloWorld",language));
     </script>
   </body>
 </html>
