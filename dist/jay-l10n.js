@@ -16,8 +16,8 @@ function translate(language) {
 }
 
 function l(word) {
-  if( language && l10n && l10n[word] && l10n[word][language] ) {
-    var translated = l10n[word][language];
+  if(language && l10n && l10n[word] && l10n[word][language]) {
+    var translated = "<span data-translate='" + word + "'>" + l10n[word][language] + "</span>";
   } else {
     var translated = "";
     console.error("l10n: '"+ word + "' not translated.")
