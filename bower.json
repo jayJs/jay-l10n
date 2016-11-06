@@ -1,6 +1,6 @@
 {
     "name": "jay-l10n",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "main": "dist/jay-l10n.js",
     "ignore": [
         ".DS_Store"

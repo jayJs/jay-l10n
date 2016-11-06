@@ -1,21 +1,29 @@
 Jay-l10n
 ===================
 
-As Simple As Possible localization tool for Single Page Apps.  
-Most localization libraries are too big (too big of a learning curve) for simple projects.
-This here keeps the translations in a simple JS object and provides two simple functions for switching language / translation.
+As Simple As Possible localization tool for Single Page Apps.    
+Most localization libraries are too big (too big of a learning curve) for simple projects. Other ones have the disadvantage of translations of the same word in different languages are not kept next to each other, making the job harder for the translator.   
+This here keeps the translations in a simple JS object and provides two simple functions for switching language / translation.  
+
+When initiated, the script walks through all DOM elements, that have "data-translate" set and translates their content into a new language. The translations are kept in a single JSON object l10n.   
 
 ##Installation  
+
+```  
+bower install jay-l10n --save
+```  
+or download it from Github.  
+
 ```  
 <script src="dist/jay-l10n.js"></script>
 <script>
   var language = "eng";
 </script>
 ```  
-Just make sure var language is declared before l() or translate() are run.
+language does not have to be defined here, but should be defined before l("keyword") is called.  
 
 ##Translations  
-Use a javascript object "l10n" to store the translations:  
+Use a javascript object "l10n" to store the translations and make it universally available:  
 ```  
 var l10n = {}  
 
@@ -29,6 +37,11 @@ l10n.hello = {
 ##HTML  
 ```  
 <div data-translate="hello"></div>
+<select>
+  <option data-translate="hello"></option>
+  <option data-translate="goodbye"></option>
+</select>
+<input type="submit" data-translate="save">
 ```  
 If function translate(language) is run, the content of this element will be translated into desired language.  
 
@@ -60,7 +73,7 @@ Make sure language is declared before calling this.
 
 The MIT License (MIT)  
 
-Copyright (c) 2015 Martin Sookael  
+Copyright (c) 2015, 2016 Martin Sookael  
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:  
 
